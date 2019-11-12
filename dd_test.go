@@ -3,10 +3,19 @@ package dd_test
 import (
 	"testing"
 
+	dd0 "github.com/jirikuncar/go-mod-test"
 	dd "github.com/jirikuncar/go-mod-test/v1"
 	dd1 "github.com/jirikuncar/go-mod-test/v1/v1/dd"
 	dd2 "github.com/jirikuncar/go-mod-test/v1/v2/dd"
 )
+
+func TestInitialVersion(t *testing.T) {
+	expected := "0.0.1"
+	if dd0.Version != expected {
+		t.Errorf("got %s; expected %s", dd0.Version, expected)
+	}
+}
+
 
 func TestVersion(t *testing.T) {
 	expected := "1.0.0"
